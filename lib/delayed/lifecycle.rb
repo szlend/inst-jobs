@@ -5,6 +5,7 @@ module Delayed
     EVENTS = {
       :perform          => [:worker, :job],
       :pop              => [:worker],
+      :execute          => [:worker],
       :exceptional_exit => [:worker, :exception],
       :invoke_job       => [:job],
       :error            => [:worker, :job, :exception],
